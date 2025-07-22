@@ -8,6 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
+            
+            // Check if it's home link or logo click - refresh the page for dynamic effect
+            if (targetId === '#home' || this.closest('.nav-logo')) {
+                // Add a smooth transition effect before refresh
+                document.body.style.opacity = '0.8';
+                document.body.style.transition = 'opacity 0.3s ease';
+                
+                setTimeout(() => {
+                    window.location.reload();
+                }, 300);
+                return;
+            }
+            
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
@@ -21,6 +34,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Add click handler specifically for logo
+    const logo = document.querySelector('.nav-logo a');
+    if (logo) {
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Add a smooth transition effect before refresh
+            document.body.style.opacity = '0.8';
+            document.body.style.transition = 'opacity 0.3s ease';
+            
+            setTimeout(() => {
+                window.location.reload();
+            }, 300);
+        });
+    }
     
     // Add scroll effect to header
     const header = document.querySelector('.header');
@@ -125,5 +154,53 @@ window.addEventListener('load', function() {
             heroContent.style.transform = 'translateY(0)';
         }, 300);
     }
+});
+
+
+// Mobile Menu Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Toggle mobile menu
+    mobileMenuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close mobile menu when clicking on nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close mobile menu on window resize if screen becomes larger
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
 });
 
