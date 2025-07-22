@@ -62,154 +62,476 @@ body {
 
 /* Logo - Proper size matching reference */
 .nav-logo .logo {
-    height: 120px;
-    width: 119px;
+    height: 90px;
+    width: 89px;
     object-fit: contain;
 }
 
-/* Hamburger Menu */
-.hamburger-menu {
-    display: none; /* Hidden by default on desktop */
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1001;
-}
-
-.hamburger-menu .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-}
-
-.hamburger-menu.active .bar:nth-child(1) {
-    transform: rotate(45deg);
-}
-
-.hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.active .bar:nth-child(3) {
-    transform: rotate(-45deg);
-}
-
-/* Mobile Menu */
-.mobile-menu {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0; /* Adjusted dynamically by JS */
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    padding-top: 100px; /* Space for header */
+/* Navigation Center - Centered nav items */
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    z-index: 999;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
 }
 
-.mobile-menu.active {
-    transform: translateX(0);
-}
-
-.mobile-nav-link {
-    color: #333;
+.nav-link {
     text-decoration: none;
-    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* CTA Button in Nav */
+.nav-cta {
+    margin-left: auto;
+}
+
+.btn-cta {
+    background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: 600;
-    padding: 15px 0;
-    width: 80%;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* Hero Section - Exact match */
+.hero-section {
+    padding: 140px 0 80px;
     text-align: center;
-    border-bottom: 1px solid #eee;
+    background: #ffffff;
 }
 
-.mobile-nav-link:last-child {
-    border-bottom: none;
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.mobile-nav-link.btn-cta {
-    margin-top: 20px;
-    width: auto;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
 }
 
-/* Responsive Design Adjustments */
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons - Exact styling */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+
+.btn-secondary {
+    background: #e8f5e8;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+}
+
+.btn-secondary:hover {
+    background: #4CAF50;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Workflow Section - Dark background with image */
+.workflow-section {
+    padding: 80px 0;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workflow-content {
+    text-align: center;
+}
+
+.workflow-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.section-description {
+    font-size: 1.25rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.benefit-item {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.benefit-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #4CAF50;
+    margin-bottom: 16px;
+    line-height: 1;
+}
+
+.benefit-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+.benefit-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 80px 0;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-content {
+    text-align: center;
+}
+
+.portfolio-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.cta-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background: #e8f5e8;
+}
+
+.contact-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+/* Discovery Call Section */
+.discovery-call {
+    text-align: center;
+    margin-bottom: 80px;
+    padding: 60px 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.discovery-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.discovery-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.contact-info-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.contact-item {
+    margin-bottom: 30px;
+}
+
+.contact-item strong {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.contact-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.social-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .nav-center,
-    .nav-cta {
-        display: none; /* Hide desktop nav and CTA */
+    .nav-center {
+        position: static;
+        transform: none;
+        margin: 0 20px;
     }
-
-    .hamburger-menu {
-        display: flex; /* Show hamburger on mobile */
-    }
-
+    
     .nav-container {
-        flex-direction: row; /* Keep logo and hamburger on one row */
-        justify-content: space-between;
-        width: 100%;
+        flex-direction: column;
+        gap: 20px;
     }
-
-    .nav-logo {
-        margin-right: auto; /* Push logo to left */
+    
+    .nav-cta {
+        margin-left: 0;
     }
-
+    
     .hero-title {
         font-size: 2.5rem;
     }
-
+    
     .hero-subtitle {
         font-size: 1.1rem;
     }
-
+    
     .hero-buttons {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .btn {
         width: 100%;
         max-width: 300px;
     }
-
+    
     .section-title {
         font-size: 2rem;
     }
-
+    
     .benefits-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-
+    
     .benefit-item {
         padding: 30px;
     }
-
+    
     .contact-form-section {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-
+    
     .cta-title {
         font-size: 2rem;
     }
-
+    
     .contact-title {
         font-size: 2rem;
     }
@@ -219,26 +541,27 @@ body {
     .container {
         padding: 0 15px;
     }
-
+    
     .hero-section {
         padding: 120px 0 60px;
     }
-
+    
     .hero-title {
         font-size: 2rem;
     }
-
+    
     .section-title {
         font-size: 1.75rem;
     }
-
+    
     .nav-logo .logo {
-        height: 90px; /* Adjust for smaller screens */
-        width: 89px;
+        height: 70px;
+        width: 69px;
     }
-
+    
     .contact-form,
     .discovery-call {
         padding: 30px 20px;
     }
 }
+
