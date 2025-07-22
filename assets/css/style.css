@@ -62,8 +62,8 @@ body {
 
 /* Logo - Proper size matching reference */
 .nav-logo .logo {
-    height: 120px;
-    width: 119px;
+    height: 90px;
+    width: 89px;
     object-fit: contain;
 }
 
