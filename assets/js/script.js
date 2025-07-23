@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Create mailto link
             const subject = encodeURIComponent('Contact Form Submission from ' + fullName);
             const body = encodeURIComponent(`Name: ${fullName}\nEmail: ${email}\n\nMessage:\n${message}`);
-            const mailtoLink = `mailto:fahadmughal5415@gmail.com?subject=${subject}&body=${body}`;
+            const mailtoLink = `mailto:contact@aspire-net.com?subject=${subject}&body=${body}`;
             
             // Open email client
             window.location.href = mailtoLink;
