@@ -606,6 +606,37 @@ body {
     width: 100%;
 }
 
+/* Social Links Styling */
+.social-links {
+    display: flex; /* Arrange icons in a row */
+    gap: 15px;   /* Space between icons */
+    margin-top: 10px; /* Space from 'FOLLOW US:' text */
+}
+
+.social-links a {
+    color: #333; /* Default icon color */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.social-links a:hover {
+    color: #4CAF50; /* Change color on hover (e.g., to your brand green) */
+}
+
+/* Specific colors for brand icons (optional, but good for recognition) */
+.social-links .fa-linkedin:hover {
+    color: #0A66C2; /* LinkedIn blue */
+}
+
+.social-links .fa-facebook:hover {
+    color: #1877F2; /* Facebook blue */
+}
+
+.social-links .fa-instagram:hover {
+    color: #E4405F; /* Instagram red/pink */
+}
+
+
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
     /* Show mobile menu toggle */
