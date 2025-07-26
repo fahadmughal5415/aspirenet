@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             // Open Calendly booking page
-            window.open('https://calendly.com/fahadmughal5415', '_blank');
+            window.open('https://calendly.com/contact-aspire-net/free-discovery-call-with-aspirenet-experts', '_blank');
         });
     });
     
