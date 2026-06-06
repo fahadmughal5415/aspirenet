@@ -1,24 +1,38 @@
-/* AspireNet — script.js */
+/* AspireNet — script.js — v4 */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── MOBILE MENU ───────────────────────────────
   const hamburger = document.getElementById('hamburger');
   const navMenu   = document.getElementById('navMenu');
 
+  /* ── HAMBURGER open/close ─────────────────── */
   hamburger?.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     navMenu.classList.toggle('open');
     document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Close menu when non-dropdown link clicked
-  navMenu?.querySelectorAll('a:not(.drop-item)').forEach(link => {
+  /* ── MOBILE: close drawer only on plain links
+       (NOT on the "Services" parent or drop-items) ── */
+  navMenu?.querySelectorAll('a.nav-link:not(.nav-item > .nav-link), a.nav-cta').forEach(link => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
         hamburger?.classList.remove('open');
         navMenu?.classList.remove('open');
         document.body.style.overflow = '';
+        document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('mob-open'));
+      }
+    });
+  });
+
+  /* Close drawer when a drop-item (actual service link) is clicked */
+  navMenu?.querySelectorAll('.drop-item').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        hamburger?.classList.remove('open');
+        navMenu?.classList.remove('open');
+        document.body.style.overflow = '';
+        document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('mob-open'));
       }
     });
   });
@@ -28,33 +42,32 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger?.classList.remove('open');
       navMenu?.classList.remove('open');
       document.body.style.overflow = '';
-      // reset all mobile dropdowns
       document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('mob-open'));
     }
   });
 
-  // ── MOBILE DROPDOWN TOGGLE ────────────────────
-  // On mobile, tap the parent nav-link to toggle dropdown
+  /* ── MOBILE DROPDOWN TOGGLE ──────────────────
+     Tap "Services" → toggle sub-list, drawer stays open ── */
   document.querySelectorAll('.nav-item > .nav-link').forEach(link => {
     link.addEventListener('click', (e) => {
       if (window.innerWidth <= 768) {
         e.preventDefault();
-        const parent = link.closest('.nav-item');
-        const isOpen = parent.classList.contains('mob-open');
-        // close all
+        e.stopPropagation();          // prevent drawer-close listeners
+        const parent  = link.closest('.nav-item');
+        const wasOpen = parent.classList.contains('mob-open');
         document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('mob-open'));
-        if (!isOpen) parent.classList.add('mob-open');
+        if (!wasOpen) parent.classList.add('mob-open');
       }
     });
   });
 
-  // ── NAVBAR SCROLL ─────────────────────────────
+  /* ── NAVBAR SCROLL ─────────────────────────── */
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
     header?.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
 
-  // ── SMOOTH SCROLL ─────────────────────────────
+  /* ── SMOOTH SCROLL ─────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       const id = anchor.getAttribute('href');
@@ -73,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── FAQ ACCORDION ─────────────────────────────
+  /* ── FAQ ACCORDION ─────────────────────────── */
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
@@ -88,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── SCROLL ANIMATIONS ─────────────────────────
+  /* ── SCROLL ANIMATIONS ─────────────────────── */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -102,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll(
     '.why-card,.service-card,.service-overview-card,.testimonial-card,' +
     '.pricing-card,.process-h-step,.faq-item,' +
-    '.detail-card,.team-card,.about-stat,.metric-item,.drop-item'
+    '.detail-card,.team-card,.about-stat,.metric-item'
   ).forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -110,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // ── CONTACT FORM ──────────────────────────────
+  /* ── CONTACT FORM ─────────────────────────── */
   const form = document.getElementById('contactForm');
   form?.addEventListener('submit', e => {
     e.preventDefault();
@@ -133,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
   });
 
-  // ── TOAST ─────────────────────────────────────
+  /* ── TOAST ────────────────────────────────── */
   function showToast(msg, type = 'success') {
     const old = document.getElementById('an-toast');
     if (old) old.remove();
