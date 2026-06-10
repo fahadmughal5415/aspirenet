@@ -381,3 +381,164 @@
   .post-title { font-size: 1.7rem; }
   .post-cta { padding: 24px 18px; }
 }
+
+/* =========================================
+   CASE STUDIES
+========================================= */
+
+/* Listing page */
+.cs-hero {
+  padding: calc(var(--nav-h, 72px) + 64px) 0 64px;
+  background: #000;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.cs-hero::before {
+  content: '';
+  position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 380px;
+  background: radial-gradient(ellipse, rgba(0,201,80,0.09) 0%, transparent 70%);
+  border-radius: 50%; z-index: 0;
+}
+.cs-hero .container { position: relative; z-index: 1; }
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  margin-top: 52px;
+}
+
+.cs-card {
+  background: #0f0f0f;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.cs-card:hover {
+  border-color: rgba(0,201,80,0.4);
+  transform: translateY(-5px);
+}
+.cs-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #111;
+}
+.cs-card-img-wrap svg { width: 100%; height: 100%; display: block; }
+
+.cs-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+
+.cs-niche {
+  display: inline-block;
+  background: rgba(0,201,80,0.12);
+  color: #00c950;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 100px;
+  margin-bottom: 12px;
+}
+.cs-card h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.08rem; font-weight: 700;
+  line-height: 1.35; margin-bottom: 10px; color: #fff;
+}
+.cs-card p {
+  font-size: 0.88rem; color: #9ca3af;
+  line-height: 1.7; margin-bottom: 16px; flex: 1;
+}
+
+/* Results pills */
+.cs-results {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+}
+.cs-result-pill {
+  background: rgba(0,201,80,0.08);
+  border: 1px solid rgba(0,201,80,0.2);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 11px; font-weight: 700; color: #00c950;
+}
+.cs-card-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 11px; color: #555; margin-top: auto;
+}
+.cs-read-more {
+  font-size: 12px; font-weight: 700; color: #00c950;
+  display: flex; align-items: center; gap: 4px;
+}
+.cs-read-more i { font-size: 10px; transition: transform 0.2s; }
+.cs-card:hover .cs-read-more i { transform: translateX(3px); }
+
+/* ── Case Study Post Page ── */
+.cs-post-hero {
+  padding: calc(var(--nav-h, 72px) + 52px) 0 52px;
+  background: #000;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.cs-cover {
+  width: 100%; max-width: 860px;
+  aspect-ratio: 16/9;
+  border-radius: 14px; overflow: hidden;
+  margin: 36px auto 0;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.cs-cover svg { width: 100%; height: 100%; display: block; }
+
+/* Key metrics bar */
+.cs-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px; background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px; overflow: hidden;
+  margin: 48px 0;
+}
+.cs-metric {
+  background: #0f0f0f; padding: 28px 20px; text-align: center;
+}
+.cs-metric-num {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem; font-weight: 900;
+  background: linear-gradient(135deg, #00c950, #00e85a);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; margin-bottom: 6px;
+}
+.cs-metric-label { font-size: 11px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; }
+
+/* Post content reuses .post-content, .post-layout, .post-sidebar from blog.css */
+.cs-tag {
+  display: inline-block;
+  background: rgba(0,201,80,0.12); color: #00c950;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+/* Store link button */
+.store-link-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff; text-decoration: none;
+  padding: 10px 20px; border-radius: 8px;
+  font-size: 13px; font-weight: 600;
+  transition: all 0.2s; margin-bottom: 32px;
+}
+.store-link-btn:hover { border-color: #00c950; color: #00c950; }
+.store-link-btn i { font-size: 11px; }
+
+@media (max-width: 600px) {
+  .cs-grid { grid-template-columns: 1fr; }
+  .cs-metrics { grid-template-columns: 1fr 1fr; }
+}
