@@ -23,6 +23,8 @@
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- NAVBAR -->
 <header class="header" id="header">
   <nav class="nav">
     <a href="index.html" class="nav-logo">
@@ -32,23 +34,62 @@
       <span></span><span></span><span></span>
     </button>
     <div class="nav-menu" id="navMenu">
-
       <a href="index.html" class="nav-link" id="nl-home">Home</a>
-
-      <!-- Services Mega Dropdown -->
       <div class="nav-item" id="ni-services">
-        <a href="#" class="nav-link" id="nl-services">
-          Services <i class="fa fa-chevron-down drop-arrow"></i>
-        </a>
-        <div class="dropdown">
-          <a href="services/wordpress.html" class="drop-item">WordPress Design</a>
-          <a href="services/shopify.html" class="drop-item">Shopify Store Design</a>
-          <a href="services/cms.html" class="drop-item">CMS Development</a>
-          <a href="services/local-seo.html" class="drop-item">Local SEO</a>
-          <a href="services/mobile-app.html" class="drop-item">Mobile App Development</a>
-          <a href="services/custom-dev.html" class="drop-item">Custom Web Development</a>
+        <a href="#" class="nav-link" id="nl-services">Services <i class="fa fa-chevron-down drop-arrow"></i></a>
+        <div class="dropdown simple-drop">
+          <a href="services/wordpress.html" class="sdrop-item">WordPress Design</a>
+          <a href="services/shopify.html" class="sdrop-item">Shopify Store Design</a>
+          <a href="services/cms.html" class="sdrop-item">CMS Development</a>
+          <a href="services/local-seo.html" class="sdrop-item">Local SEO</a>
+          <a href="services/mobile-app.html" class="sdrop-item">Mobile App Development</a>
+          <a href="services/custom-dev.html" class="sdrop-item">Custom Web Development</a>
         </div>
-        </div>
+      </div>
+      <a href="about.html" class="nav-link active" id="nl-about">About</a>
+      <a href="blog.html" class="nav-link" id="nl-blog">Blog</a>
+      <a href="case-studies.html" class="nav-link" id="nl-cs">Case Studies</a>
+      <a href="contact.html" class="nav-link" id="nl-contact">Contact</a>
+      <a href="https://calendly.com/contact-aspire-net/free-discovery-call-with-aspirenet-experts" target="_blank" rel="noopener" class="nav-cta">
+        <i class="fa fa-calendar-check"></i> Book Free Call
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label">ABOUT US</div>
+    <h1 class="section-title">Built by Practitioners, <span class="gradient-text">Not Just Designers</span></h1>
+    <p class="section-sub">We are a results-driven web design and SEO agency that obsesses over your growth — not just your website.</p>
+  </div>
+</section>
+
+<!-- ABOUT STORY -->
+<section style="padding:100px 0; background:var(--bg);">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title" style="text-align:left; font-size:clamp(1.6rem,3vw,2.2rem);">
+          Why We Started <span class="gradient-text">AspireNet</span>
+        </h2>
+        <p style="color:var(--text-muted); line-height:1.8; margin-bottom:20px;">
+          AspireNet was founded with a simple belief: businesses deserve more than a pretty website. They deserve a digital partner who understands marketing, SEO, and conversion — not just code.
+        </p>
+        <p style="color:var(--text-muted); line-height:1.8; margin-bottom:20px;">
+          We have built 150+ websites, generated millions in client revenue, and helped local businesses rank #1 on Google in their cities. We have done it by obsessing over results — not just deliverables.
+        </p>
+        <p style="color:var(--text-muted); line-height:1.8; margin-bottom:40px;">
+          Today, AspireNet serves clients across the USA, UK, Canada, and Australia — offering WordPress design, Shopify stores, Local SEO, CMS development, and mobile app development from one expert team.
+        </p>
+        <div class="about-stats">
+          <div class="about-stat"><div class="about-stat-num">150+</div><div class="about-stat-label">Projects Delivered</div></div>
+          <div class="about-stat"><div class="about-stat-num">5 Yrs</div><div class="about-stat-label">In Business</div></div>
+          <div class="about-stat"><div class="about-stat-num">98%</div><div class="about-stat-label">Client Satisfaction</div></div>
+          <div class="about-stat"><div class="about-stat-num">15+</div><div class="about-stat-label">Industries Served</div></div>
         </div>
       </div>
       <div class="about-visual">
@@ -120,12 +161,16 @@
   <div class="container">
     <h2>Ready to Work With <span class="gradient-text">AspireNet?</span></h2>
     <p>Book a free discovery call and let's talk about how we can grow your business online.</p>
-    <a href="https://calendly.com/contact-aspire-net/free-discovery-call-with-aspirenet-experts" target="_blank" class="btn btn-primary btn-large"><i class="fa fa-calendar-check"></i> Book Free Call</a>
+    <a href="https://calendly.com/contact-aspire-net/free-discovery-call-with-aspirenet-experts" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+      <i class="fa fa-calendar-check"></i> Book Free Call
+    </a>
     <p class="cta-note">⚡ Free. No commitment required.</p>
   </div>
 </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -156,7 +201,9 @@
         <a href="https://calendly.com/contact-aspire-net/free-discovery-call-with-aspirenet-experts" target="_blank">Book a Call</a>
       </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 AspireNet. All rights reserved. | Web Design & SEO Agency | Richmond, VA, USA</p></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AspireNet. All rights reserved. | Web Design & SEO Agency | Richmond, VA, USA</p>
+    </div>
   </div>
 </footer>
 <script src="assets/js/script.js"></script>
