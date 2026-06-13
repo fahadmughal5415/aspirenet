@@ -15,7 +15,7 @@
   content: '';
   position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
   width: 600px; height: 400px;
-  background: radial-gradient(ellipse, rgba(0,201,80,0.09) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(197,253,22,0.09) 0%, transparent 70%);
   border-radius: 50%; z-index: 0;
 }
 .blog-hero .container { position: relative; z-index: 1; }
@@ -39,7 +39,7 @@
   transition: border-color 0.25s, transform 0.25s;
 }
 .blog-card:hover {
-  border-color: rgba(0,201,80,0.4);
+  border-color: rgba(197,253,22,0.4);
   transform: translateY(-5px);
 }
 
@@ -75,8 +75,8 @@
 
 .blog-tag {
   display: inline-block;
-  background: rgba(0,201,80,0.12);
-  color: #00c950;
+  background: rgba(197,253,22,0.12);
+  color: #c5fd16;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -115,7 +115,7 @@
 .blog-read-more {
   font-size: 12px;
   font-weight: 700;
-  color: #00c950;
+  color: #c5fd16;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -139,12 +139,12 @@
   margin-bottom: 20px;
 }
 .post-hero .breadcrumb a { color: #555; text-decoration: none; transition: color 0.2s; }
-.post-hero .breadcrumb a:hover { color: #00c950; }
+.post-hero .breadcrumb a:hover { color: #c5fd16; }
 
 .post-tag {
   display: inline-block;
-  background: rgba(0,201,80,0.12);
-  color: #00c950;
+  background: rgba(197,253,22,0.12);
+  color: #c5fd16;
   font-size: 11px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   padding: 5px 14px; border-radius: 100px;
@@ -170,7 +170,7 @@
   flex-wrap: wrap;
 }
 .post-meta span { display: flex; align-items: center; gap: 6px; }
-.post-meta i { color: #00c950; }
+.post-meta i { color: #c5fd16; }
 
 /* Feature image */
 .post-feature-img {
@@ -239,8 +239,8 @@
 .post-content strong { color: #fff; font-weight: 700; }
 
 .post-content .highlight-box {
-  background: rgba(0,201,80,0.08);
-  border: 1px solid rgba(0,201,80,0.22);
+  background: rgba(197,253,22,0.08);
+  border: 1px solid rgba(197,253,22,0.22);
   border-radius: 10px;
   padding: 22px 24px;
   margin: 28px 0;
@@ -258,7 +258,7 @@
   font-size: 0.9rem;
 }
 .post-content th {
-  background: rgba(0,201,80,0.1);
+  background: rgba(197,253,22,0.1);
   color: #fff;
   font-weight: 700;
   padding: 12px 16px;
@@ -274,8 +274,8 @@
 
 /* CTA inside post */
 .post-cta {
-  background: linear-gradient(135deg, rgba(0,201,80,0.12), rgba(0,201,80,0.06));
-  border: 1px solid rgba(0,201,80,0.25);
+  background: linear-gradient(135deg, rgba(197,253,22,0.12), rgba(197,253,22,0.06));
+  border: 1px solid rgba(197,253,22,0.25);
   border-radius: 14px;
   padding: 36px 32px;
   text-align: center;
@@ -330,7 +330,7 @@
   line-height: 1.5;
   display: block;
 }
-.toc-list a:hover { color: #00c950; }
+.toc-list a:hover { color: #c5fd16; }
 
 /* Related posts sidebar */
 .related-post {
@@ -343,9 +343,9 @@
 .related-post:last-child { margin-bottom: 0; }
 .rp-icon {
   width: 36px; height: 36px; border-radius: 7px;
-  background: rgba(0,201,80,0.1);
+  background: rgba(197,253,22,0.1);
   display: flex; align-items: center; justify-content: center;
-  font-size: 14px; color: #00c950;
+  font-size: 14px; color: #c5fd16;
   flex-shrink: 0;
 }
 .rp-text { font-size: 0.8rem; color: #9ca3af; line-height: 1.5; transition: color 0.2s; }
@@ -362,7 +362,7 @@
   text-decoration: none;
   transition: all 0.2s;
 }
-.tag-pill:hover { color: #00c950; border-color: rgba(0,201,80,0.3); }
+.tag-pill:hover { color: #c5fd16; border-color: rgba(197,253,22,0.3); }
 
 /* Related posts bottom section */
 .related-bottom {
@@ -399,7 +399,7 @@
   content: '';
   position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
   width: 600px; height: 380px;
-  background: radial-gradient(ellipse, rgba(0,201,80,0.09) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(197,253,22,0.09) 0%, transparent 70%);
   border-radius: 50%; z-index: 0;
 }
 .cs-hero .container { position: relative; z-index: 1; }
@@ -423,7 +423,7 @@
   transition: border-color 0.25s, transform 0.25s;
 }
 .cs-card:hover {
-  border-color: rgba(0,201,80,0.4);
+  border-color: rgba(197,253,22,0.4);
   transform: translateY(-5px);
 }
 .cs-card-img-wrap {
@@ -439,8 +439,8 @@
 
 .cs-niche {
   display: inline-block;
-  background: rgba(0,201,80,0.12);
-  color: #00c950;
+  background: rgba(197,253,22,0.12);
+  color: #c5fd16;
   font-size: 11px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   padding: 4px 12px; border-radius: 100px;
@@ -461,18 +461,18 @@
   display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
 }
 .cs-result-pill {
-  background: rgba(0,201,80,0.08);
-  border: 1px solid rgba(0,201,80,0.2);
+  background: rgba(197,253,22,0.08);
+  border: 1px solid rgba(197,253,22,0.2);
   border-radius: 100px;
   padding: 4px 12px;
-  font-size: 11px; font-weight: 700; color: #00c950;
+  font-size: 11px; font-weight: 700; color: #c5fd16;
 }
 .cs-card-meta {
   display: flex; align-items: center; justify-content: space-between;
   font-size: 11px; color: #555; margin-top: auto;
 }
 .cs-read-more {
-  font-size: 12px; font-weight: 700; color: #00c950;
+  font-size: 12px; font-weight: 700; color: #c5fd16;
   display: flex; align-items: center; gap: 4px;
 }
 .cs-read-more i { font-size: 10px; transition: transform 0.2s; }
@@ -509,7 +509,7 @@
   display: block;
   font-family: 'Poppins', sans-serif;
   font-size: 2rem; font-weight: 900;
-  background: linear-gradient(135deg, #00c950, #00e85a);
+  background: linear-gradient(135deg, #c5fd16, #d4fe3a);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text; margin-bottom: 6px;
 }
@@ -518,7 +518,7 @@
 /* Post content reuses .post-content, .post-layout, .post-sidebar from blog.css */
 .cs-tag {
   display: inline-block;
-  background: rgba(0,201,80,0.12); color: #00c950;
+  background: rgba(197,253,22,0.12); color: #c5fd16;
   font-size: 11px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   padding: 5px 14px; border-radius: 100px;
@@ -535,7 +535,7 @@
   font-size: 13px; font-weight: 600;
   transition: all 0.2s; margin-bottom: 32px;
 }
-.store-link-btn:hover { border-color: #00c950; color: #00c950; }
+.store-link-btn:hover { border-color: #c5fd16; color: #c5fd16; }
 .store-link-btn i { font-size: 11px; }
 
 @media (max-width: 600px) {
