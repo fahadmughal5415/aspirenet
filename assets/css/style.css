@@ -241,16 +241,21 @@ section{padding:96px 0;}
   font-size:11px;font-weight:800;letter-spacing:0.2em;
   text-transform:uppercase;color:var(--accent);
   margin-bottom:14px;display:block;
+  text-align:center;
 }
 .section-title{
   font-family:var(--font-display);
   font-size:clamp(1.9rem,4vw,3rem);
   font-weight:800;line-height:1.12;
   letter-spacing:-0.025em;margin-bottom:18px;
+  text-align:center;
 }
 .section-sub{
   font-size:1.05rem;color:var(--text-muted);
   max-width:620px;line-height:1.7;margin-bottom:52px;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 /* ============================================
@@ -713,22 +718,7 @@ section{padding:96px 0;}
 .about-text p{text-align:left;}
 .about-stats{text-align:left;}
 /* Services section titles stay centered */
-.services-section .section-label,
-.services-section .section-title,
-.services-section .section-sub,
-.why-section .section-label,
-.why-section .section-title,
-.why-section .section-sub,
-.results-section .section-label,
-.results-section .section-title,
-.results-section .section-sub,
-.pricing-section .section-label,
-.pricing-section .section-title,
-.pricing-section .section-sub,
-.process-section .section-label,
-.process-section .section-title,
-.faq-section .section-label,
-.faq-section .section-title{text-align:center;}
+/* sections that need center alignment — already handled globally above */
 
 .about-text h2{
   font-family:var(--font-display);
