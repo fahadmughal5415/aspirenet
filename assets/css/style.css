@@ -1044,3 +1044,17 @@ section{padding:96px 0;}
   .contact-form-panel{padding:20px 14px;}
   .contact-info-box{padding:20px 14px;}
 }
+
+/* Internal links — Wikipedia style */
+.il{
+  color:var(--accent);
+  text-decoration:underline;
+  text-decoration-color:rgba(197,253,22,0.35);
+  text-underline-offset:3px;
+  text-decoration-thickness:1px;
+  transition:text-decoration-color 0.2s, color 0.2s;
+}
+.il:hover{
+  color:#fff;
+  text-decoration-color:rgba(197,253,22,0.8);
+}
